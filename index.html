@@ -24,7 +24,37 @@
 
 <body>
 
-  <h3>Hello weather app</h3>
+  <div class="container my-3 mx-auto">
+    <div class="row">
+      <div class="col-4 offset-4">
+        <h1 class="text-muted text-center my-4">Weather App</h1>
+
+        <form class="change-location my-4 text-center text-muted">
+          <label for="location">Enter a location</label>
+          <input type="text" name="location" class="form-control p-2">
+        </form>
+
+        <!-- Card of infromation -->
+        <div class="card shadow-lg rounded">
+          <img src="https://via.placeholder.com/400x300" alt="weather" class="time card-img-top">
+
+          <div class="icon bg-light mx-auto text-center">
+
+          </div>
+
+          <div class="details text-muted text-uppercase text-center">
+            <h5 class="my-3">City Name</h5>
+            <div class="my-3">Weather condition</div>
+            <div class="display-4 my-4">
+              <span>temp</span>
+              <span>&deg;C</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Bootstrap js -->
   <script src="./js/bootstrap.bundle.min.js"></script>
