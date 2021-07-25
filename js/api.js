@@ -27,15 +27,18 @@ const getCity = async (city) => {
   return data[0];
 };
 
+// Testing
+/*
 getCity('Milan')
-  .then((data) => {
-    // console.log(data);
-    const locationId = data.Key;
-    return getWeather(locationId);
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+.then((data) => {
+  // console.log(data);
+  const locationId = data.Key;
+  return getWeather(locationId);
+})
+.then((data) => {
+  console.log(data);
+})
+.catch((err) => {
+  console.log(err);
+});
+*/
