@@ -7,8 +7,9 @@ const updateCity = async (location) => {
   const weather = await getWeather(locationDetails.Key);
 
   return {
-    locationDetails: locationDetails,
-    weather: weather,
+    // object shorthand
+    locationDetails,
+    weather,
   };
 };
 
