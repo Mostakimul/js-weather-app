@@ -5,9 +5,12 @@ const details = document.querySelector('.details');
 
 // Update UI function
 const updateUI = (data) => {
+  // destruction
+  const { locationDetails, weather } = data;
+
   // console.log(data);
-  const locationDetails = data.locationDetails;
-  const weather = data.weather;
+  // const locationDetails = data.locationDetails;
+  // const weather = data.weather;
 
   // details
   details.innerHTML = `
