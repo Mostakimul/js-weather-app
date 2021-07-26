@@ -77,4 +77,18 @@ cityForm.addEventListener('submit', (e) => {
     .catch((err) => {
       console.log(err);
     });
+
+  // Set location in localstorage
+  localStorage.setItem('location', location);
 });
+
+// IF localstorage has location it will call api the location
+if (localStorage.getItem('location')) {
+  updateCity(localStorage.getItem('location'))
+    .then((data) => {
+      updateUI(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
