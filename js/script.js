@@ -5,6 +5,10 @@ const details = document.querySelector('.details');
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img');
 
+// calling constructor of Forecast class
+const forecast = new Forcast();
+// console.log(forecast);
+
 // Update UI function
 const updateUI = (data) => {
   // destruction
@@ -47,6 +51,7 @@ const updateUI = (data) => {
   }
 };
 
+/*
 // API calling here
 const updateCity = async (location) => {
   const locationDetails = await getCity(location);
@@ -58,6 +63,7 @@ const updateCity = async (location) => {
     weather,
   };
 };
+*/
 
 // getting form data
 cityForm.addEventListener('submit', (e) => {
@@ -69,7 +75,8 @@ cityForm.addEventListener('submit', (e) => {
 
   // console.log(location);
   // updating UI
-  updateCity(location)
+  forecast
+    .updateCity(location)
     .then((data) => {
       // console.log(data);
       updateUI(data);
@@ -84,7 +91,8 @@ cityForm.addEventListener('submit', (e) => {
 
 // IF localstorage has location it will call api the location
 if (localStorage.getItem('location')) {
-  updateCity(localStorage.getItem('location'))
+  forecast
+    .updateCity(localStorage.getItem('location'))
     .then((data) => {
       updateUI(data);
     })
