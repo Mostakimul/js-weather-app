@@ -1,9 +1,9 @@
 class Forcast {
   constructor() {
     this.key = '4qED7942VPDdNCbAeBik53zjy2TcGPoo';
-    this.baseUrl = 'http://dataservice.accuweather.com/currentconditions/v1/';
+    this.baseUrl = 'https://dataservice.accuweather.com/currentconditions/v1/';
     this.locationUrl =
-      'http://dataservice.accuweather.com/locations/v1/cities/search';
+      'https://dataservice.accuweather.com/locations/v1/cities/search';
   }
 
   // Methods / prototypes
